@@ -77,7 +77,6 @@
         border-bottom: none;
     }
 
-
     /* exit event */
 
     #exit-menu:checked~.menubar{
@@ -388,7 +387,7 @@
     }
 
     #ipad-introduce{
-        padding-top:55px;
+        padding-top: 55px;
     }
 
     .ipad-mini{
@@ -430,6 +429,7 @@
 /* under 600px */
 
 @media (max-width: 600px){
+
 
     .for-sale{
         background-image: url(./apple_img/hero_bts__bcuslanw39xe_medium.jpg);
@@ -473,6 +473,10 @@
     #whats-today .prointroduce{
         font-size: 19px;
         margin-bottom: 6px
+    }
+
+    #open-search:checked~.menubar>.invisible #input-text{
+        max-width: 400px;
     }
 }
 
@@ -549,6 +553,10 @@
         background-position: center;
         background-repeat: no-repeat;
     }
+
+    #open-search:checked~.menubar>.invisible #input-text{
+        max-width: 350px;
+    }
 }
 
 /* under 372px */
@@ -561,5 +569,8 @@
         font-size: 14px;; 
         background-color: #f5f5f7;
     }
-}
 
+    #open-search:checked~.menubar>.invisible #input-text{
+        max-width: 0px;
+    }
+}
