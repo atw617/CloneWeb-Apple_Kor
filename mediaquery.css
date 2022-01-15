@@ -129,10 +129,6 @@
         transform: translateY(-32px);
     }
 
-    #open-search:checked~.menubar>.invisible #input-text{
-        max-width: 558px;
-    }
-
     #open-search:checked~.menubar>.invisible .searchbox{
         display: flex;
         align-items: center;
@@ -392,7 +388,7 @@
 
     .ipad-mini{
         height: 31px;
-        margin-block-start: 0px;
+        margin-block-start: 40px;
         margin-block-end: 10px;
     }
 
@@ -475,9 +471,6 @@
         margin-bottom: 6px
     }
 
-    #open-search:checked~.menubar>.invisible #input-text{
-        max-width: 400px;
-    }
 }
 
 /* under 426px */
@@ -553,10 +546,6 @@
         background-position: center;
         background-repeat: no-repeat;
     }
-
-    #open-search:checked~.menubar>.invisible #input-text{
-        max-width: 350px;
-    }
 }
 
 /* under 372px */
@@ -568,9 +557,5 @@
         padding-top: 57px;
         font-size: 14px;; 
         background-color: #f5f5f7;
-    }
-
-    #open-search:checked~.menubar>.invisible #input-text{
-        max-width: 0px;
     }
 }
