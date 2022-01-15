@@ -1,0 +1,565 @@
+@media (max-width: 832px){
+
+    .invisible{
+        display: block;
+    }
+
+    .menubar{
+        height: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .searchbox{
+        transform: rotateX(-80deg);
+        transform-origin: top;
+        transition: transform 520ms ease-in-out;
+    }
+
+    /* changed bar */
+
+    .menubar .chg-bar{
+        display: flex;
+        width: 100%;
+        margin: 0px;
+        padding: 12px;
+    }
+
+    .menubar .chg-bar i{
+        font-size: 18px;
+    }
+
+    .menubar .chg-bar #open-btn{
+        display: block;
+    }
+
+    /* search box */
+
+    .menubar .searchbox{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* basic frames of menu under 832px */
+
+    .menubar .bar{
+        transform: translateY(-10px);
+        transform-origin: top;
+        transition: all 400ms ease;
+        opacity: 0;
+        display: block;
+        width: 100%;
+        padding: 4px 50px;
+    }
+
+    .menubar .bar li{
+        width: 100%;
+        max-width: 600px;
+        display: inline-block;
+    }
+
+    .menubar>.bar .icon{
+        display: none;
+    }
+
+    .menubar>.bar>.other-menu{
+        border-bottom: 1px solid gray;
+        color: rgb(150, 150, 150);
+        text-align: left;
+        font-size: 17px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+        transition: all 400ms ease;
+    }
+
+    .menubar>.bar>.other-menu:nth-child(11){
+        border-bottom: none;
+    }
+
+
+    /* exit event */
+
+    #exit-menu:checked~.menubar{
+        height: 45px;
+        background-color: rgba(32, 32, 32, 0.918);
+        transition: all 500ms cubic-bezier(0.645, 0.140, 0.425, 0.870);
+    }
+
+    /* open event */
+
+    #open-menu:checked~.menubar{
+        height: 100%;
+        background-color: black;
+        transition: all 500ms cubic-bezier(0.645, 0.140, 0.425, 0.870);
+    }
+
+    #open-menu:checked~.menubar>.invisible>.chg-bar>#open-btn{
+        display: none;
+    }
+
+    #open-menu:checked~.menubar>.invisible>.chg-bar>#exit-btn{
+        display: block;
+    }
+
+    #open-menu:checked~.menubar>.invisible>.chg-bar>.icon>a{
+        width: 0 auto;
+        height: 0 auto;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 300ms cubic-bezier(0.645, 0.140, 0.425, 0.870);
+    }
+
+    .menubar>.invisible>.chg-bar>.icon>a{
+        transition: all 300ms cubic-bezier(0.645, 0.140, 0.425, 0.870);
+    }
+
+    #open-menu:checked~.menubar>.invisible>.searchbox{
+        transform: rotateX(0deg);
+    }
+
+    #open-menu:checked~.menubar>.bar{
+        transform: rotateX(0deg);
+        opacity: 1;
+    }
+
+
+    /* searchbox event */
+
+    #open-search:checked~.menubar>.invisible{
+        transform: translateY(-32px);
+    }
+
+    #open-search:checked~.menubar>.invisible #input-text{
+        max-width: 558px;
+    }
+
+    #open-search:checked~.menubar>.invisible .searchbox{
+        display: flex;
+        align-items: center;
+    }
+
+    #open-search:checked~ #searchbox{
+        flex-grow: 1;
+    }
+
+    #open-search:checked~.menubar>.invisible input{
+        z-index: 1;
+    }
+
+    #open-search:checked~.menubar>.invisible .quit{
+        display: block;
+        flex-shrink: 0;
+        margin-left: 15px;
+    }
+
+    #open-search:checked~.menubar>.bar{
+        height: 0;
+        transform: translateY(20px);
+    }
+
+    #open-search:checked~.menubar>.bar>.other-menu{
+        height: 0;
+        opacity: 0;
+    }
+
+    #open-search:checked~.menubar>.rapid-link{
+        display: block;
+    }
+
+    #open-search:checked~.menubar>.rapid-link>ul{
+        opacity: 1;
+        transition: all 400ms ease;
+        height: auto;
+        transform: translateY(0px);
+    }
+
+    /* footer */
+
+    .bottomlist{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ulbox{
+        overflow: hidden;
+    }
+
+    .bottomlist ul{
+        height: 0;
+        overflow: hidden;
+        transform: translateY(-100px);
+    }
+
+    .bottomlist ul li{
+        padding-left: 15px;
+    }
+
+    #account, #education, #about-apple{
+        color: rgb(85, 85, 85);
+        margin-top: 0px;
+    }
+
+    .bottomlist label{
+        cursor: pointer;
+    }
+
+    h3:hover{
+        color: black;
+    }
+
+    .list-units{
+        padding-top: 9px;
+        font-weight: 400;
+        color: rgb(85, 85, 85);  
+        border-bottom: 1px solid rgb(172, 172, 172);
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    h3::after{
+        float: right;
+        content: "\f4fe";
+        font-family: "bootstrap-icons";
+        position: relative;
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+    }
+
+    /* events in footer */
+
+    #shopping-check:checked~.ulbox #shopping-lists{
+        height: auto;
+        color: rgb(150, 150, 150);
+        transform: translateY(0px);
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+    }
+
+    #shopping-check:checked~.list-title>::after{
+        transform: rotateZ(45deg) scale(1.2);
+    }
+
+    #survice-check:checked~.ulbox #survice-lists{
+        height: auto;
+        color: rgb(150, 150, 150);
+        transform: translateY(0px);
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+    }
+
+    #survice-check:checked~.list-title>::after{
+        transform: rotateZ(45deg) scale(1.2);
+    }
+    
+    #account-check:checked~.ulbox #account-lists{
+        height: auto;
+        color: rgb(150, 150, 150);
+        transform: translateY(0px);
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+    }
+
+    #account-check:checked~.list-title>::after{
+        transform: rotateZ(45deg) scale(1.2);
+    }
+
+    #applestore-check:checked~.ulbox #applestore-lists{
+        height: auto;
+        color: rgb(150, 150, 150);
+        transform: translateY(0px);
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+    }
+
+    #applestore-check:checked~.list-title>::after{
+        transform: rotateZ(45deg) scale(1.2);
+    }
+
+    #business-check:checked~.ulbox #business-lists{
+        height: auto;
+        color: rgb(150, 150, 150);
+        transform: translateY(0px);
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+    }
+
+    #business-check:checked~.list-title>::after{
+        transform: rotateZ(45deg) scale(1.2);
+    }
+
+    #education-check:checked~.ulbox #education-lists{
+        height: auto;
+        color: rgb(150, 150, 150);
+        transform: translateY(0px);
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+    }
+
+    #education-check:checked~.list-title>::after{
+        transform: rotateZ(45deg) scale(1.2);
+    }
+
+    #values-check:checked~.ulbox #values-lists{
+        height: auto;
+        color: rgb(150, 150, 150);
+        transform: translateY(0px);
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+    }
+
+    #values-check:checked~.list-title>::after{
+        transform: rotateZ(45deg) scale(1.2);
+    }
+
+    #about-apple-check:checked~.ulbox #about-apple-lists{
+        height: auto;
+        color: rgb(150, 150, 150);
+        transform: translateY(0px);
+        transition: transform 300ms ease, -webkit-transform 300ms ease;
+    }
+
+    #about-apple-check:checked~.list-title>::after{
+        transform: rotateZ(45deg) scale(1.2);
+    }
+}
+
+
+/* under 777px */
+
+@media (max-width: 777px){
+    .for-sale>.introduce{
+        font-size: 50px;
+    }
+}
+
+/* under 735px */
+
+@media (max-width: 735px){
+    .main .introduce{
+        font-size: 40px;
+    }
+
+    .main .introduce-link{
+        font-size: 18px;
+    }
+
+    .main .prointroduce{
+        font-size: 28px;
+    }
+
+    .unit .prointroduce{
+        font-size: 16px;
+    }
+}
+
+/* under 730px */
+
+@media (max-width: 730px){
+
+    .iphone13{
+        background-image: url(./apple_img/hero_iphone_13__f194u1rdooeq_small.jpg);
+    }
+
+    .iphone13 .introduce{
+        padding-top: 250px;
+    }
+
+    .product-ds{
+        position:relative;
+        text-align: center;
+        display: inline;
+    }
+
+    .unit{
+        position:relative;
+        width: 100%;
+        height: 580px;
+        margin-bottom: 13px;
+        text-align: center;
+    }
+
+    .watch{
+        margin-block-start: 5px;
+        margin-block-end: 10px;
+
+    }
+
+    .new-watch{
+        position: initial;
+
+        font-size: 12px;
+    }
+
+    #watch-introduce{
+        padding-top:40px;
+    }
+
+    #ipad-introduce{
+        padding-top:55px;
+    }
+
+    .ipad-mini{
+        height: 31px;
+        margin-block-start: 0px;
+        margin-block-end: 10px;
+    }
+
+    #whats-today{
+        padding-top: 5px;
+    }
+
+    #tv-logo{
+        padding-top: 40px;
+    }
+
+    .tv-logo{
+        margin-block-start: 0px;
+    }
+
+    .snoopy-logo{
+        margin-block-start: 15px;
+    }
+
+    .legal{
+        flex-direction: column;
+    }
+
+    .legal-links{
+        margin-left: 0px;
+    }
+
+    .legal-links a{
+        margin-right: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* under 600px */
+
+@media (max-width: 600px){
+
+    .for-sale{
+        background-image: url(./apple_img/hero_bts__bcuslanw39xe_medium.jpg);
+    }
+    
+    .iphone13-pro{
+        background-image: url(./apple_img/hero_iphone_13pro__dhnsegysa42u_medium.jpg);
+    }
+
+
+    .main .introduce{
+        font-size: 28px;
+    }
+
+    .main .prointroduce{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .main .introduce-link{
+        font-size: 15px;
+    }
+
+    .iphone13 .introduce{
+        padding-top: 215px;
+    }
+
+    .for-sale, .iphone13-pro, .iphone13, .unit{
+        height: 480px;
+    }
+
+    .unit .sub-title{
+        font-size: 15px;
+    }
+
+    .unit .title{
+        font-size: 32px;
+        padding-bottom: 5px;
+    }
+
+    #whats-today .prointroduce{
+        font-size: 19px;
+        margin-bottom: 6px
+    }
+}
+
+/* under 426px */
+
+@media (max-width: 426px){
+    .for-sale{
+        background-image: url(./apple_img/hero_bts__bcuslanw39xe_small.jpg);
+    }
+    
+    .iphone13-pro{
+        background-image: url(./apple_img/hero_iphone_13pro__dhnsegysa42u_small.jpg);
+    }
+
+    #mac{
+        background-image: url(./apple_img/tile_macbookpro__cx0ur0qg9biq_medium.jpg);
+    }
+    
+    #watch{
+        background-image: url(./apple_img/tile_watch__e9n11b6m6yq2_medium.jpg);
+    
+    }
+    
+    .watch{
+        margin-block-end: 10px;
+        font-size: 38px;
+        background-image: url(./apple_img/tile_watch_logo_lte__h7snssb7mqq2_medium.png);
+        height: 70px;
+        background-size: 160px 60px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    #iPad{
+        background-image: url(./apple_img/promo_ipad__fioegapg12qi_medium.jpg);
+    }
+    
+    #ipad-mini{
+        background-image: url(./apple_img/promo_ipad_mini__spq4zjcuuaie_medium.jpg);
+    }
+    
+    .ipad-mini{
+        height: 31px;
+        margin-block-end: 10px;
+        font-size: 40px;
+        background-image: url(./apple_img/promo_logo_ipad_mini__n5nqff6gq8yu_medium.png);
+        background-size: 153px 31px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    #today-at-apple{
+        background-image: url(./apple_img/promo_tile_taa_ps__4unq1d3k5iai_medium.jpg);
+    }
+    
+    #apple-tv{
+        background-image: url(./apple_img/promo_snoopy_inspace__l93esmw1xteu_medium.jpg);
+    
+    }
+    
+    .tv-logo{
+        font-size: 40px;
+        background-image: url(./apple_img/logo_light__cfvl40z2nzau_medium.png);
+        height: 24px;
+        background-size: 60px 24px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }    
+    
+    .snoopy-logo{
+        background-image: url(./apple_img/logo_snoopy_inspace__er6gl5ncs3ma_small.png);
+        height: 70px;
+        background-size: 300px 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/* under 372px */
+
+@media(max-width: 372px){
+    .little-module{
+        height: 100px;
+        text-align: center;
+        padding-top: 57px;
+        font-size: 14px;; 
+        background-color: #f5f5f7;
+    }
+}
+
