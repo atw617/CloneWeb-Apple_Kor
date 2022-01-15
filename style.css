@@ -242,6 +242,8 @@ ul{
     z-index: 2;
     text-decoration: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 .introduce-link{
@@ -444,6 +446,7 @@ ul{
     display: flex;
     flex-direction: column;
     justify-content: end;
+    position: relative;
 }
 
 .iPad{
@@ -457,8 +460,12 @@ ul{
 }
 
 #ipad-introduce{
-    bottom: 0;
-    padding-bottom: 5%;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
 }
 
 /* iPad mini */
@@ -479,6 +486,10 @@ ul{
     background-size: 153px 31px;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+#ipad-mini-introduce{
+    padding-top: 60px;
 }
 
 .mini-logo{
