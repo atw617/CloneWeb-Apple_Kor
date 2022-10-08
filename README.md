@@ -8,4 +8,4 @@ icons sources from https://icons.getbootstrap.kr/
 fonts and img sources from https://www.apple.com/kr/
 
 this clone web site's address
-https://moonsoonge.github.io/CloneWeb-Apple_Kor/apple_kor
+https://atw617.github.io/CloneWeb-Apple_Kor/apple_kor
